@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/header-compressed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primary);
+}
+
+header h1 {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary);
+  display: flex;
+  align-self: center;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 0px 0px var(--color-accent);
+  font-family: var(--font-headings);
+  font-size: 0.5rem;
+}
+
+.logo {
+  height: clamp(30px, 10%, 7rem);
+  width: clamp(30px, 10%, 7rem);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background-color: var(--color-primary);
+  border-top: solid var(--color-accent);
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: var(--color-text-on-dark);
+  font-family: var(--font-subheadings);
+  font-size: 0.5rem;
+}

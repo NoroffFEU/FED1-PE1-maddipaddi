@@ -6,4 +6,10 @@
   --color-card: #eae0d5;
   --color-text-on-dark: #fff;
   --color-text-on-light: #000;
+  --font-headings: "Playfair Display", Georgia, "Times New Roman", Garamond,
+    Times, serif;
+  --font-subheadings: "Lora", "Merriweather", "Times New Roman",
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Open Sans", Arial, Helvetica, Tahoma, sans-serif;
+  --font-accent: "Libre Baskerville", Garamond, Georgia, serif;
 }
