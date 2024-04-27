@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    color: var(--color-text-on-dark); 
+}
+
+footer a {
+    color: var(--color-text-on-dark); 
+}
+
+footer a:hover {
+    font-weight: bold;
+}

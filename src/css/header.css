@@ -43,3 +43,7 @@ nav a {
   font-family: var(--font-subheadings);
   font-size: 1.25rem;
 }
+
+nav a:hover {
+  font-weight: bold;
+}
