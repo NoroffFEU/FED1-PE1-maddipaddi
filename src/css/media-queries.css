@@ -1,0 +1,34 @@
+@media (max-width: 599px) {
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  html {
+    font-size: 18px;
+  }
+
+  .menu-icon,
+  .close-icon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 901px) {
+  html {
+    font-size: 25px;
+  }
+
+  .menu-icon,
+  .close-icon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+}

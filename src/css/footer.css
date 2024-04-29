@@ -1,14 +1,19 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-primary);
-    color: var(--color-text-on-dark); 
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
 }
 
 footer a {
-    color: var(--color-text-on-dark); 
+  color: var(--color-text-on-dark);
 }
 
 footer a:hover {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
 }

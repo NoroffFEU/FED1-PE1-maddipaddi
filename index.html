@@ -13,9 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script type="module" src="./js/index.mjs"></script>
   </head>
   <body>
     <header>
@@ -26,20 +31,38 @@
       />
       <h1 class="header-h1">Tale Turner</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Blog</a>
-        <a href="#">About</a>
-        <a href="#">Search</a>
-        <a href="#">Login</a>
+        <div>
+          <button class="menu-icon">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+          <button class="close-icon">
+            <span class="material-symbols-outlined"> close </span>
+          </button>
+        </div>
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+          <a href="#">Search</a>
+          <a href="#">Login</a>
+        </div>
       </nav>
     </header>
     <main>
       <h1>Content</h1>
+      <p>Here is the content</p>
+      <p>Here is the content</p>
+      <p>Here is the content</p>
+      <p>Here is the content</p>
+      <p>Here is the content</p>
+      <p>Here is the content</p>
     </main>
     <footer>
       <form method="post">
-        <label for="email">Don't want to miss a post? Sign up to our newsletter:</label>
-        <input type="email" name="email" id="email"/>
+        <label for="email"
+          >Don't want to miss a post? Sign up to our newsletter:</label
+        >
+        <input type="email" name="email" id="email" />
         <button>Sign up</button>
       </form>
       <div>
@@ -47,7 +70,9 @@
         <p>Email: contact@taleturnerblog.com</p>
         <p>Phone: +1-555-0123-456</p>
         <p>Address:</p>
-        <address>Tale Turner Blog, 123 Quill Lane, Booktown, BK 98765 Novellus</address>
+        <address>
+          Tale Turner Blog, 123 Quill Lane, Booktown, BK 98765 Novellus
+        </address>
       </div>
       <div>
         <p>Go back to top ↑</p>
@@ -58,7 +83,7 @@
         />
       </div>
       <div>
-        <p>© 2024 TaleTurner</p>
+        <p>&copy; 2024 TaleTurner</p>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms and Conditions</a>
       </div>

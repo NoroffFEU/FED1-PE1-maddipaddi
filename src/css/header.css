@@ -7,7 +7,6 @@ header {
   background-size: cover;
   background-position: center;
   background-color: var(--color-primary);
-  min-height: 60vh;
 }
 
 header h1 {
@@ -16,34 +15,63 @@ header h1 {
   display: flex;
   align-self: center;
   padding: 0.5rem;
-  margin-bottom: 10rem; 
+  margin-bottom: clamp(1rem, 20vh, 4rem);
   box-shadow: 3px 3px 0px 0px var(--color-accent);
   font-family: var(--font-headings);
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: 1rem;
 }
 
 .logo {
-  height: clamp(50px, 10%, 5rem);
-  width: clamp(50px, 10%, 5rem);
+  height: clamp(2.5rem, 8vw, 5rem);
+  width: clamp(2.5rem, 8vw, 5rem);
   margin-top: 1rem;
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-evenly;
-  gap: 2rem;
+  flex-direction: column;
   background-color: var(--color-primary);
   border-top: solid var(--color-accent);
-  padding: 1rem 0;
 }
 
 nav a {
   color: var(--color-text-on-dark);
   font-family: var(--font-subheadings);
-  font-size: 1.25rem;
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  border-bottom: solid 1px;
 }
 
 nav a:hover {
   font-weight: bold;
+}
+
+.menu-icon,
+.close-icon {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.close-icon {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.show-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 2.25rem;
+  padding: 1rem;
+  background: var(--color-menu-bg);
+  border: solid 2rem var(--color-primary);
 }
