@@ -1,34 +1,48 @@
 @media (max-width: 599px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  } /* This hamburger menu was created by following this tutorial: https://www.youtube.com/watch?v=flItyHiDm7E */
+
+  .menu {
+    position: fixed;
+    left: -100%;
+    flex-direction: column;
+    background: var(--color-primary);
+    width: 100%;
+    transition: 0.3s;
+    margin-top: 3rem;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    border-bottom: solid 1px #fff;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 900) {
   html {
     font-size: 18px;
   }
-
-  .menu-icon,
-  .close-icon {
-    display: none;
-  }
-
-  .menu {
-    display: flex;
-  }
 }
 
 @media (min-width: 901px) {
   html {
     font-size: 25px;
-  }
-
-  .menu-icon,
-  .close-icon {
-    display: none;
-  }
-
-  .menu {
-    display: flex;
-    padding: 1rem;
-    justify-content: space-evenly;
   }
 }

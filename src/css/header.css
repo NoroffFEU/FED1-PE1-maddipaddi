@@ -30,9 +30,15 @@ header h1 {
 
 nav {
   display: flex;
-  flex-direction: column;
   background-color: var(--color-primary);
   border-top: solid var(--color-accent);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  gap: 2rem;
 }
 
 nav a {
@@ -40,14 +46,29 @@ nav a {
   font-family: var(--font-subheadings);
   font-size: 0.75rem;
   margin-left: 1rem;
-  border-bottom: solid 1px;
 }
 
 nav a:hover {
   font-weight: bold;
 }
 
-.menu-icon,
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+/*.menu-icon,
 .close-icon {
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
@@ -74,4 +95,4 @@ nav a:hover {
   padding: 1rem;
   background: var(--color-menu-bg);
   border: solid 2rem var(--color-primary);
-}
+}*/
