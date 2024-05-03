@@ -39,6 +39,7 @@ nav ul {
   list-style: none;
   padding: 1rem;
   gap: 2rem;
+  margin: 0;
 }
 
 nav a {
