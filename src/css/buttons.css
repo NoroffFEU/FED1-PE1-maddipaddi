@@ -1,0 +1,8 @@
+.cta {
+  background-color: var(--color-cta);
+  color: var(--color-text-on-dark);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  box-shadow: var(--shadow-cta);
+  font-family: var(--font-headings);
+}

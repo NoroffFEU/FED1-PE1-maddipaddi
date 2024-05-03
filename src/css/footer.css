@@ -3,6 +3,9 @@ footer {
   flex-direction: column;
   background-color: var(--color-primary);
   color: var(--color-text-on-dark);
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
 }
 
 footer a {
@@ -16,4 +19,42 @@ footer a:hover {
 body > footer {
   position: sticky;
   top: 100vh;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.contact {
+  max-width: 25%;
+}
+
+.bottom-line-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.links-footer,
+.scroll-to-top {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.links-footer {
+  margin-right: 6rem;
+}
+
+.scroll-to-top {
+  margin-bottom: 3rem;
+}
+
+.copyright {
+  margin: 0;
 }
