@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <script type="module" src="../js/pages/login.mjs"></script>
+    <script type="module" src="../js/pages/register.mjs"></script>
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
           <span class="bar"></span>
         </div>
         <ul class="menu">
-          <li class="nav-link"><a href="index.html">Home</a></li>
+          <li class="nav-link"><a href="../index.html">Home</a></li>
           <li class="nav-link"><a href="#">Blog</a></li>
           <li class="nav-link"><a href="#">About</a></li>
           <li class="nav-link"><a href="#">Search</a></li>
@@ -46,10 +46,10 @@
         <h1 class="login-title">Register account</h1>
         <div class="login-card-content">
           <div>
-            <form method="post" class="login-form">
+            <form method="post" action="/auth/register" id="register-form" class="login-form">
               <div class="form-fieldset">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" required pattern="^[\w]+$" title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99" maxlength="20"/>
               </div>
               <div class="form-fieldset">
                 <label for="tale-turner-id">Tale Turner ID</label>
@@ -57,11 +57,11 @@
               </div>
               <div class="form-fieldset">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Email must be a noroff domain. Example: my-email@(stud.)noroff.no"/>
               </div>
               <div class="form-fieldset">
                 <label for="email">Password</label>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required minlength="8"/>
               </div>
               <button class="cta login-button">Register</button>
             </form>
@@ -81,15 +81,15 @@
     </main>
     <footer>
       <form class="newsletter" method="post">
-        <label for="email"
+        <label for="newsletter-email"
           >Don't want to miss a post? Sign up to our newsletter:</label
         >
         <div>
           <input
             class="newsletter-email-field"
             type="email"
-            name="email"
-            id="email"
+            name="newsletter-email"
+            id="newsletter-email"
           />
           <button class="cta">Sign up</button>
         </div>
