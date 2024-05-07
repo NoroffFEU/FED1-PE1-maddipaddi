@@ -15,11 +15,18 @@ img {
     bottom: 0; 
 }
 
+.smoke-wrapper-all-3 {
+    display: none;
+}
+
+.display-smoke {
+    display: block; 
+    }
+    
 .smoke-wrapper {
     position: absolute;
     right: 40%; 
-    bottom: 333px;
-    display: none; 
+    bottom: 333px; 
 }
 
 .smoke, .smoke2, .smoke3 {
