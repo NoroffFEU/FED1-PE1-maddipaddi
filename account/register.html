@@ -42,11 +42,11 @@
       </nav>
     </header>
     <main>
-      <section class="card-bg login-card">
-        <h1 class="login-title">Register account</h1>
-        <div class="login-card-content">
-          <div>
-            <form method="post" action="/auth/register" id="register-form" class="login-form">
+      <section class="card-bg register-card">
+        <h1 class="register-title">Register account</h1>
+        <div class="register-card-content">
+          <div class="register-wrapper">
+            <form method="post" action="/auth/register" id="register-form" class="register-form">
               <div class="form-fieldset">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required pattern="^[\w]+$" title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99" maxlength="20"/>
@@ -63,18 +63,31 @@
                 <label for="email">Password</label>
                 <input type="password" name="password" id="password" required minlength="8"/>
               </div>
-              <button class="cta login-button">Register</button>
+              <button class="cta register-button">Register</button>
             </form>
             <p>
               Already have an account?
-              <a href="./login.html" class="sign-up-link">Log in.</a>
+              <a href="./login.html" class="log-in-link">Log in.</a>
             </p>
           </div>
-          <div class="pipe">
+          <div class="smoke-and-pipe-wrapper">
+            <div class="pipe-wrapper">
             <img
               src="../assets/dall_e_pipe_compressed.png"
-              alt="A brown pipe."
+              alt="A brown smoking pipe."
             />
+            </div>
+            <div class="smoke-wrapper-all-3">
+            <div class="smoke-wrapper">
+              <img class="smoke" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
+            </div>
+            <div class="smoke-wrapper">
+              <img class="smoke2" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
+            </div>
+            <div class="smoke-wrapper">
+              <img class="smoke3" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
+            </div>
+            </div>
           </div>
         </div>
       </section>

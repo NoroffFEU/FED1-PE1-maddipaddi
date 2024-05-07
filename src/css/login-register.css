@@ -1,4 +1,4 @@
-.login-card {
+.login-card, .register-card {
   margin: 2rem;
   padding: 2rem;
   border-radius: 2rem;
@@ -7,12 +7,12 @@
   max-width: 80vw;
 }
 
-.login-card-content {
+.login-card-content, .register-card-content {
   display: flex;
   flex-wrap: wrap;
 }
 
-.login-title {
+.login-title, .register-title {
   font-family: var(--font-headings);
   align-self: center;
 }
@@ -30,12 +30,12 @@
   padding: 0.5rem 1rem;
 }
 
-.login-button {
+.login-button, .register-button {
   margin-left: 2.5rem;
   padding: 0.5rem 1.25rem;
 }
 
-.sign-up-link {
+.sign-up-link, .log-in-link {
   color: var(--color-text-on-light);
   font-style: italic;
 }

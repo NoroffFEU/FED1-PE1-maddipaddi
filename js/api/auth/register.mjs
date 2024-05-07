@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "../constants.mjs";
+import { displayRegisterConfirmation } from "../../utils/registerConfirmation.mjs";
 
 const action = "/auth/register";
 const method = "post";
@@ -15,6 +16,8 @@ export async function register(account) {
     }); 
 
     const result = await response.json();
-    console.log(result);
+    displayRegisterConfirmation(); 
+    return result; 
+    
 
 }
