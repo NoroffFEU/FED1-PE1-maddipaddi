@@ -2,3 +2,48 @@
   padding: 0.25rem 1rem;
   box-shadow: var(--shadow-inner);
 }
+
+.blogpost-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.account-field {
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.postfield {
+  border: solid  var(--color-primary);
+  padding: 0.5rem; 
+}
+
+.postfield-title, .postfield-tags, .postfield-bodytext {
+  min-width: 50vw;
+}
+
+.postfield-author, .postfield-image {
+  min-width: 15rem; 
+}
+
+.postfield-bodytext {
+  min-height: 10rem; 
+}
+
+.center-button {
+  align-self: center;
+  margin-bottom: 2rem; 
+}
+
+.post-page-title {
+  margin-top: 3rem; 
+}

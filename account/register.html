@@ -49,19 +49,19 @@
             <form method="post" action="/auth/register" id="register-form" class="register-form">
               <div class="form-fieldset">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" required pattern="^[\w]+$" title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99" maxlength="20"/>
+                <input class="account-field" type="text" name="name" id="name" required pattern="^[\w]+$" title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99" maxlength="20"/>
               </div>
               <div class="form-fieldset">
                 <label for="tale-turner-id">Tale Turner ID</label>
-                <input type="number" name="tale-turner-id" id="tale-turner-id" />
+                <input class="account-field" type="number" name="tale-turner-id" id="tale-turner-id" />
               </div>
               <div class="form-fieldset">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Email must be a noroff domain. Example: my-email@(stud.)noroff.no"/>
+                <input class="account-field" type="email" name="email" id="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Email must be a noroff domain. Example: my-email@(stud.)noroff.no"/>
               </div>
               <div class="form-fieldset">
-                <label for="email">Password</label>
-                <input type="password" name="password" id="password" required minlength="8"/>
+                <label for="password">Password</label>
+                <input class="account-field" type="password" name="password" id="password" required minlength="8"/>
               </div>
               <button class="cta register-button">Register</button>
             </form>

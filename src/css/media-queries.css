@@ -33,6 +33,10 @@
     border-bottom: solid 1px #fff;
     padding-bottom: 0.5rem;
   }
+
+  .postfield-title, .postfield-tags, .postfield-bodytext {
+    min-width: 90vw;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -46,6 +50,10 @@
 
   nav ul {
     gap: 4rem;
+  }
+
+  .postfield-title, .postfield-tags, .postfield-bodytext {
+    min-width: 70vw;
   }
 }
 
