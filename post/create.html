@@ -2,12 +2,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaleTurner | Edit blogpost</title>
+    <title>TaleTurner | Create a new blogpost</title>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/tale_turner_logo.png"
+      href="../assets/tale_turner_logo.png"
     />
     <link rel="stylesheet" href="../src/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,12 +16,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <script type="module" src="./js/pages/index.mjs"></script>
+    <script type="module" src="../js/pages/createPost.mjs"></script>
   </head>
   <body>
     <header>
       <img
-        src="./assets/tale_turner_logo.png"
+        src="../assets/tale_turner_logo.png"
         alt="Tale Turner Logo"
         class="logo"
       />
@@ -43,7 +43,7 @@
     </header>
     <main>
         <section>
-            <h1 class="post-page-title">Edit blogpost</h1>
+            <h1 class="post-page-title">Create a new blogpost</h1>
             <form class="blogpost-form" id="create-post">
                 <div class="form-fieldset">
                     <label for="title">Title</label>
@@ -53,11 +53,10 @@
                     <label for="date">Date</label>
                     <input class="postfield" type="date" name="date" id="date" required/>
                 </div>
-                <input class="postfield" type="hidden" name="id" id="id" required/>
-                <div class="form-fieldset">
+                <!--<div class="form-fieldset">
                     <label for="media">Image</label>
                     <input class="postfield postfield-image" type="url" name="media" id="media"/>
-                </div>
+                </div>-->
                 <div class="form-fieldset">
                     <label for="body">Text</label>
                     <textarea class="postfield postfield-bodytext" name="body" id="body" required></textarea>
@@ -65,7 +64,7 @@
                 <div class="form-fieldset">
                     <label for="tags">Tags</label>
                     <input class="postfield postfield-tags" type="text" name="tags" id="tags"/>
-                </div>
+                </div> 
                 <button class="cta cta-bigger center-button">Create post</button>
             </form>
         </section>
