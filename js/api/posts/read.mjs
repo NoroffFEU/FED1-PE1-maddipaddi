@@ -1,17 +1,20 @@
-import { API_BASE_URL } from "../constants.mjs";
+import * as API from "../constants.mjs";
 import { fetchToken } from "../auth/fetchToken.mjs";
 
-const action = "/posts"; 
+const API_ENDPOINT = API.API_ENDPOINT_BLOG_POSTS + API.API_ENDPOINT_NAME;
+const API_BASE_URL = API.API_BASE_URL;
 
 export async function getPosts(){
 
-    const getPostsURL = `${API_BASE_URL}${action}`; 
+    const getPostsURL = API_BASE_URL + API_ENDPOINT;  
     
     const response = await fetchToken(getPostsURL, {
         
-    })
+    });
 
-    return await response.json();
+    const posts = await response.json();
+    console.log(posts);
+    return posts;
 }
 
 export async function getPost(id){
@@ -19,7 +22,7 @@ export async function getPost(id){
         throw new Error("Get requires a postID");
     }
 
-    const getPostURL = `${API_BASE_URL}${action}/${id}`; 
+    const getPostURL = `${API_BASE_URL}${API_ENDPOINT}/${id}`; 
     
     const response = await fetchToken(getPostURL, {
         
@@ -27,3 +30,4 @@ export async function getPost(id){
 
     return await response.json();
 }
+
