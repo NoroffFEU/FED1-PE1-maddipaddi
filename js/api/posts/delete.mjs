@@ -6,7 +6,7 @@ const method = "delete";
 
 export async function removePost(id){
 
-    if (id) {
+    if (!id) {
         throw new Error("Delete requires a postID");
     }
 
