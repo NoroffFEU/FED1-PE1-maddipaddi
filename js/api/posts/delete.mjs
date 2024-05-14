@@ -1,7 +1,8 @@
-import { API_BASE_URL } from "../constants.mjs";
+import * as API from "../constants.mjs";
 import { fetchToken } from "../auth/fetchToken.mjs";
 
-const action = "/posts"; 
+const API_ENDPOINT = API.API_ENDPOINT_BLOG_POSTS + API.API_ENDPOINT_NAME;
+const API_BASE_URL = API.API_BASE_URL;
 const method = "delete";
 
 export async function removePost(id){
@@ -10,7 +11,7 @@ export async function removePost(id){
         throw new Error("Delete requires a postID");
     }
 
-    const removePostURL = `${API_BASE_URL}${action}/${id}`; 
+    const removePostURL = `${API_BASE_URL}${API_ENDPOINT}/${id}`; 
     
     const response = await fetchToken(removePostURL, {
         method
