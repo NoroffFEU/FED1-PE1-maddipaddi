@@ -14,15 +14,27 @@ function submitCreatePostHandler(event) {
         const formValues = Object.fromEntries(formData.entries());
 
      const tagsAsArray = stringToArray(formValues.tags);
-
-    const postData = {
+     const mediaAsObject = setMediaObject(formValues.mediaURL, formValues.mediaALT);
+     
+    
+     const postData = {
         title: formValues.title,
+        media: mediaAsObject,
         body: formValues.body,
         tags: tagsAsArray
     }
+
   createPost(postData); 
 }
 
 function stringToArray(inputString) {
   return inputString.trim().split(",").map(item => item.trim());
+}
+
+function setMediaObject(stringUrl, stringAlt) {
+ const media = {
+    url: stringUrl,
+    alt: stringAlt
+  }
+  return media; 
 }

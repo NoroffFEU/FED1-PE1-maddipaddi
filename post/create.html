@@ -42,32 +42,67 @@
       </nav>
     </header>
     <main>
-        <section>
-            <h1 class="post-page-title">Create a new blogpost</h1>
-            <form class="blogpost-form" id="create-post">
-                <div class="form-fieldset">
-                    <label for="title">Title</label>
-                    <input class="postfield postfield-title" type="text" name="title" id="title" required/>
-                </div>
-                <div class="form-fieldset">
-                    <label for="date">Date</label>
-                    <input class="postfield" type="date" name="date" id="date" required/>
-                </div>
-                <!--<div class="form-fieldset">
-                    <label for="media">Image</label>
-                    <input class="postfield postfield-image" type="url" name="media" id="media"/>
-                </div>-->
-                <div class="form-fieldset">
-                    <label for="body">Text</label>
-                    <textarea class="postfield postfield-bodytext" name="body" id="body" required></textarea>
-                </div>
-                <div class="form-fieldset">
-                    <label for="tags">Tags</label>
-                    <input class="postfield postfield-tags" type="text" name="tags" id="tags"/>
-                </div> 
-                <button class="cta cta-bigger center-button">Create post</button>
-            </form>
-        </section>
+      <section>
+        <h1 class="post-page-title">Create a new blogpost</h1>
+        <form class="blogpost-form" id="create-post">
+          <div class="form-fieldset">
+            <label for="title">Title</label>
+            <input
+              class="postfield postfield-title"
+              type="text"
+              name="title"
+              id="title"
+              required
+            />
+          </div>
+          <div class="form-fieldset">
+            <label for="date">Date</label>
+            <input
+              class="postfield"
+              type="date"
+              name="date"
+              id="date"
+              required
+            />
+          </div>
+          <div class="form-fieldset">
+            <label for="media">Image</label>
+            <input
+              class="postfield postfield-image"
+              type="url"
+              name="mediaURL"
+              id="mediaURL"
+              placeholder="Type url here..."
+            />
+            <input
+              class="postfield postfield-image"
+              type="text"
+              name="mediaALT"
+              id="mediaALT"
+              placeholder="Describe the image here..."
+            />
+          </div>
+          <div class="form-fieldset">
+            <label for="body">Text</label>
+            <textarea
+              class="postfield postfield-bodytext"
+              name="body"
+              id="body"
+              required
+            ></textarea>
+          </div>
+          <div class="form-fieldset">
+            <label for="tags">Tags</label>
+            <input
+              class="postfield postfield-tags"
+              type="text"
+              name="tags"
+              id="tags"
+            />
+          </div>
+          <button class="cta cta-bigger center-button">Create post</button>
+        </form>
+      </section>
     </main>
     <footer>
       <form class="newsletter" method="post">
