@@ -34,41 +34,69 @@
         </div>
         <ul class="menu">
           <li class="nav-link"><a href="../index.html">Home</a></li>
-          <li class="nav-link"><a href="#">Blog</a></li>
           <li class="nav-link"><a href="#">About</a></li>
           <li class="nav-link"><a href="#">Search</a></li>
-          <li class="nav-link"><a href="../account/login.html">Login</a></li>
+          <li class="nav-link">
+            <a class="login-link" href="../account/login.html">Login</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-        <section>
-            <h1 class="post-page-title">Edit blogpost</h1>
-            <form class="blogpost-form" id="create-post">
-                <div class="form-fieldset">
-                    <label for="title">Title</label>
-                    <input class="postfield postfield-title" type="text" name="title" id="title" required/>
-                </div>
-                <div class="form-fieldset">
-                    <label for="date">Date</label>
-                    <input class="postfield" type="date" name="date" id="date" required/>
-                </div>
-                <input class="postfield" type="hidden" name="id" id="id" required/>
-                <div class="form-fieldset">
-                    <label for="media">Image</label>
-                    <input class="postfield postfield-image" type="url" name="media" id="media"/>
-                </div>
-                <div class="form-fieldset">
-                    <label for="body">Text</label>
-                    <textarea class="postfield postfield-bodytext" name="body" id="body" required></textarea>
-                </div>
-                <div class="form-fieldset">
-                    <label for="tags">Tags</label>
-                    <input class="postfield postfield-tags" type="text" name="tags" id="tags"/>
-                </div>
-                <button class="cta cta-bigger center-button">Create post</button>
-            </form>
-        </section>
+      <section>
+        <h1 class="post-page-title">Edit blogpost</h1>
+        <form class="blogpost-form" id="create-post">
+          <div class="form-fieldset">
+            <label for="title">Title</label>
+            <input
+              class="postfield postfield-title"
+              type="text"
+              name="title"
+              id="title"
+              required
+            />
+          </div>
+          <div class="form-fieldset">
+            <label for="date">Date</label>
+            <input
+              class="postfield"
+              type="date"
+              name="date"
+              id="date"
+              required
+            />
+          </div>
+          <input class="postfield" type="hidden" name="id" id="id" required />
+          <div class="form-fieldset">
+            <label for="media">Image</label>
+            <input
+              class="postfield postfield-image"
+              type="url"
+              name="media"
+              id="media"
+            />
+          </div>
+          <div class="form-fieldset">
+            <label for="body">Text</label>
+            <textarea
+              class="postfield postfield-bodytext"
+              name="body"
+              id="body"
+              required
+            ></textarea>
+          </div>
+          <div class="form-fieldset">
+            <label for="tags">Tags</label>
+            <input
+              class="postfield postfield-tags"
+              type="text"
+              name="tags"
+              id="tags"
+            />
+          </div>
+          <button class="cta cta-bigger center-button">Create post</button>
+        </form>
+      </section>
     </main>
     <footer>
       <form class="newsletter" method="post">

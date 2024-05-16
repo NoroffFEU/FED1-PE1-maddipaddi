@@ -17,11 +17,11 @@ export async function login(account) {
     }); 
 
     const result = await response.json();
-
-    displayLoginConfirmation(); 
     
     const { accessToken, ...profile } = result.data; 
 
     accountStorage.save("token", accessToken);
     accountStorage.save("account", profile);
+
+    location.reload();
 }

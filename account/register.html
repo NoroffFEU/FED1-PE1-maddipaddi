@@ -34,10 +34,11 @@
         </div>
         <ul class="menu">
           <li class="nav-link"><a href="../index.html">Home</a></li>
-          <li class="nav-link"><a href="#">Blog</a></li>
           <li class="nav-link"><a href="#">About</a></li>
           <li class="nav-link"><a href="#">Search</a></li>
-          <li class="nav-link"><a href="./account/login.html">Login</a></li>
+          <li class="nav-link">
+            <a class="login-link" href="./account/login.html">Login</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -46,22 +47,56 @@
         <h1 class="register-title">Register account</h1>
         <div class="register-card-content">
           <div class="register-wrapper">
-            <form method="post" action="/auth/register" id="register-form" class="register-form">
+            <form
+              method="post"
+              action="/auth/register"
+              id="register-form"
+              class="register-form"
+            >
               <div class="form-fieldset">
                 <label for="name">Name</label>
-                <input class="account-field" type="text" name="name" id="name" required pattern="^[\w]+$" title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99" maxlength="20"/>
+                <input
+                  class="account-field"
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  pattern="^[\w]+$"
+                  title="Username can only contain either lowercase or uppercase letters, numbers, and underscores(_). Example: My_Username99"
+                  maxlength="20"
+                />
               </div>
               <div class="form-fieldset">
                 <label for="tale-turner-id">Tale Turner ID</label>
-                <input class="account-field" type="number" name="tale-turner-id" id="tale-turner-id" />
+                <input
+                  class="account-field"
+                  type="number"
+                  name="tale-turner-id"
+                  id="tale-turner-id"
+                />
               </div>
               <div class="form-fieldset">
                 <label for="email">Email</label>
-                <input class="account-field" type="email" name="email" id="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Email must be a noroff domain. Example: my-email@(stud.)noroff.no"/>
+                <input
+                  class="account-field"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="Email must be a noroff domain. Example: my-email@(stud.)noroff.no"
+                />
               </div>
               <div class="form-fieldset">
                 <label for="password">Password</label>
-                <input class="account-field" type="password" name="password" id="password" required minlength="8"/>
+                <input
+                  class="account-field"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  minlength="8"
+                />
               </div>
               <button class="cta register-button">Register</button>
             </form>
@@ -72,21 +107,33 @@
           </div>
           <div class="smoke-and-pipe-wrapper">
             <div class="pipe-wrapper">
-            <img
-              src="../assets/dall_e_pipe_compressed.png"
-              alt="A brown smoking pipe."
-            />
+              <img
+                src="../assets/dall_e_pipe_compressed.png"
+                alt="A brown smoking pipe."
+              />
             </div>
             <div class="smoke-wrapper-all-3">
-            <div class="smoke-wrapper">
-              <img class="smoke" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
-            </div>
-            <div class="smoke-wrapper">
-              <img class="smoke2" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
-            </div>
-            <div class="smoke-wrapper">
-              <img class="smoke3" src="../assets/smoke_illustration_paint_transparent.png" alt="Smoke wafting up from a pipe"/>
-            </div>
+              <div class="smoke-wrapper">
+                <img
+                  class="smoke"
+                  src="../assets/smoke_illustration_paint_transparent.png"
+                  alt="Smoke wafting up from a pipe"
+                />
+              </div>
+              <div class="smoke-wrapper">
+                <img
+                  class="smoke2"
+                  src="../assets/smoke_illustration_paint_transparent.png"
+                  alt="Smoke wafting up from a pipe"
+                />
+              </div>
+              <div class="smoke-wrapper">
+                <img
+                  class="smoke3"
+                  src="../assets/smoke_illustration_paint_transparent.png"
+                  alt="Smoke wafting up from a pipe"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -9,6 +9,6 @@ export function initiateLoginFormListener() {
         const formData = new FormData(form);
         const account = Object.fromEntries(formData.entries());
 
-        login(account); 
+        login(account);
 });
 }
