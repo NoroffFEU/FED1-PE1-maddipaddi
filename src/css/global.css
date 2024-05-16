@@ -1,8 +1,14 @@
-main {
+body {
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 80%;
 }
 
 .card-bg {
