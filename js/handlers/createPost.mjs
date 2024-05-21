@@ -27,11 +27,11 @@ function submitCreatePostHandler(event) {
   createPost(postData); 
 }
 
-function stringToArray(inputString) {
+export function stringToArray(inputString) {
   return inputString.trim().split(",").map(item => item.trim());
 }
 
-function setMediaObject(stringUrl, stringAlt) {
+export function setMediaObject(stringUrl, stringAlt) {
  const media = {
     url: stringUrl,
     alt: stringAlt
