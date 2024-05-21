@@ -1,4 +1,5 @@
 import { getPosts } from "../api/posts/read.mjs";
+import { viewEditLink } from "../utils/viewEditLink.mjs";
 
 export function postTemplate(postData) {
     const title = document.createElement("h3");
@@ -7,6 +8,9 @@ export function postTemplate(postData) {
     date.innerText = postData.created;
     const author = document.createElement("p");
     author.innerText = postData.author.name;
+
+    const editLink = viewEditLink(postData); 
+
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
     const body = document.createElement("p");
@@ -16,7 +20,7 @@ export function postTemplate(postData) {
 
     const post = document.createElement("div");
     post.classList.add("post");
-    post.append(title, date, author, media, body, tags);
+    post.append(title, date, author, editLink, media, body, tags);
     return post;
 }
 

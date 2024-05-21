@@ -13,7 +13,6 @@ export async function getPosts(){
     });
 
     const posts = await response.json();
-    console.log(posts);
     return posts;
 }
 
@@ -26,8 +25,10 @@ export async function getPost(id){
     
     const response = await fetchToken(getPostURL, {
         
-    })
+    });
 
-    return await response.json();
+    const result = await response.json();
+    const post = result.data;
+    return post;
 }
 

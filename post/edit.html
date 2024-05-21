@@ -7,7 +7,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/tale_turner_logo.png"
+      href="../assets/tale_turner_logo.png"
     />
     <link rel="stylesheet" href="../src/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,12 +16,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <script type="module" src="./js/pages/index.mjs"></script>
+    <script type="module" src="../js/pages/editPost.mjs"></script>
   </head>
   <body>
     <header>
       <img
-        src="./assets/tale_turner_logo.png"
+        src="../assets/tale_turner_logo.png"
         alt="Tale Turner Logo"
         class="logo"
       />
@@ -45,7 +45,7 @@
     <main>
       <section>
         <h1 class="post-page-title">Edit blogpost</h1>
-        <form class="blogpost-form" id="create-post">
+        <form class="blogpost-form" id="update-post">
           <div class="form-fieldset">
             <label for="title">Title</label>
             <input
@@ -56,6 +56,7 @@
               required
             />
           </div>
+          <input class="postfield" type="hidden" name="id" id="id" required />
           <div class="form-fieldset">
             <label for="date">Date</label>
             <input
@@ -66,14 +67,21 @@
               required
             />
           </div>
-          <input class="postfield" type="hidden" name="id" id="id" required />
           <div class="form-fieldset">
-            <label for="media">Image</label>
+            <label for="mediaURL">Image</label>
             <input
               class="postfield postfield-image"
               type="url"
-              name="media"
-              id="media"
+              name="mediaURL"
+              id="mediaURL"
+              placeholder="Type url here..."
+            />
+            <input
+              class="postfield postfield-image"
+              type="text"
+              name="mediaALT"
+              id="mediaALT"
+              placeholder="Describe the image here..."
             />
           </div>
           <div class="form-fieldset">
@@ -94,7 +102,7 @@
               id="tags"
             />
           </div>
-          <button class="cta cta-bigger center-button">Create post</button>
+          <button class="cta cta-bigger center-button">Update post</button>
         </form>
       </section>
     </main>
