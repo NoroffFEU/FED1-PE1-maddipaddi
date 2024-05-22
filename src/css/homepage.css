@@ -32,3 +32,12 @@
 .welcome-banner-logo {
   align-self: flex-end;
 }
+
+/* Blog feed */
+
+.blog-feed {
+}
+
+.blog-feed-title {
+  background-color: var(--color-bg-title);
+}
