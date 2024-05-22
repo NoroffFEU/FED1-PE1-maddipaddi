@@ -1,0 +1,34 @@
+/* Welcome banner */
+
+.welcome-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: var(--color-primary);
+}
+
+.welcome-banner-text {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card);
+  max-width: 30rem;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  box-shadow: var(--shadow-inner);
+}
+
+.welcome-banner-heading {
+  display: flex;
+  align-self: center;
+  font-family: var(--font-headings);
+}
+
+.welcome-banner-p {
+  font-family: var(--font-accent);
+}
+
+.welcome-banner-logo {
+  align-self: flex-end;
+}

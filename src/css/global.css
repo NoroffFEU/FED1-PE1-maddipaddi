@@ -8,7 +8,6 @@ main {
   display: flex;
   flex-direction: column;
   align-self: center;
-  max-width: 80%;
 }
 
 .card-bg {
