@@ -13,9 +13,7 @@ export async function removePost(id){
 
     const removePostURL = `${API_BASE_URL}${API_ENDPOINT}/${id}`; 
     
-    const response = await fetchToken(removePostURL, {
+    await fetchToken(removePostURL, {
         method
     })
-
-    return await response.json();
 }
