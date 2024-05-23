@@ -1,0 +1,19 @@
+.latest-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.latest-posts-title {
+  background-color: var(--color-bg-title);
+  border: solid var(--color-accent);
+  padding: 0.5rem 1rem;
+  margin-top: 3rem;
+}
+
+.post-card {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 1rem;
+}
