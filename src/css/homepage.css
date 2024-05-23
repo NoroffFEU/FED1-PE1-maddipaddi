@@ -35,9 +35,44 @@
 
 /* Blog feed */
 
-.blog-feed {
+.blog-feed-section {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .blog-feed-title {
   background-color: var(--color-bg-title);
+  border: solid var(--color-accent); 
+  padding: 0.5rem 1rem; 
+}
+
+.blogfeed {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.post {
+  width: clamp(320px, 80%, 900px);
+}
+
+.post-subheading {
+  display: flex;
+  gap: 0.25rem; 
+}
+
+.edit-link {
+  color: var(--color-text-on-light); 
+  align-self: center;
+}
+
+.tagsContainer {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 0.5rem; 
+}
+.tags {
+  background-color: var(--color-bg-title);
+  padding: 0.25rem; 
 }
