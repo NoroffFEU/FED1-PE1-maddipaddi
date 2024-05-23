@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaleTurner | Edit blogpost</title>
+    <title>TaleTurner | Edit post</title>
     <link
       rel="icon"
       type="image/png"
@@ -43,8 +43,8 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h1 class="post-page-title">Edit blogpost</h1>
+      <section class="post-section">
+        <h1 class="post-page-title">Edit post</h1>
         <form class="blogpost-form" id="update-post">
           <div class="form-fieldset">
             <label for="title">Title</label>
@@ -57,16 +57,6 @@
             />
           </div>
           <input class="postfield" type="hidden" name="id" id="id" required />
-          <div class="form-fieldset">
-            <label for="date">Date</label>
-            <input
-              class="postfield"
-              type="date"
-              name="date"
-              id="date"
-              required
-            />
-          </div>
           <div class="form-fieldset">
             <label for="mediaURL">Image</label>
             <input
@@ -102,8 +92,9 @@
               id="tags"
             />
           </div>
-          <button class="cta cta-bigger center-button">Update post</button>
+          <button class="cta cta-bigger">Update post</button>
         </form>
+        <button class="cta cta-bigger delete-button">Delete post</button>
       </section>
     </main>
     <footer>

@@ -45,6 +45,7 @@
   background-color: var(--color-bg-title);
   border: solid var(--color-accent); 
   padding: 0.5rem 1rem; 
+  margin-top: 3rem; 
 }
 
 .blogfeed {
@@ -55,16 +56,44 @@
  
 .post {
   width: clamp(320px, 80%, 900px);
+  margin: 2rem 0; 
 }
 
+.post-heading {
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5rem;
+}
+
+.post-heading > h3 {
+  margin: 0; 
+}
 .post-subheading {
   display: flex;
   gap: 0.25rem; 
+  font-family: var(--font-subheadings);
+}
+
+.post-subheading > p {
+  margin-top: 0; 
+  margin-bottom: 2rem; 
+}
+
+.media-container {
+max-height: 50vh;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.media-container > img {
+object-fit: cover;
+object-position: center center;
 }
 
 .edit-link {
   color: var(--color-text-on-light); 
-  align-self: center;
 }
 
 .tagsContainer {

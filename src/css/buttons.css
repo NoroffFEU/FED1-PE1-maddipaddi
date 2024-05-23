@@ -2,7 +2,7 @@
   background-color: var(--color-cta);
   color: var(--color-text-on-dark);
   border: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.3rem 0.75rem;
   box-shadow: var(--shadow-cta);
   font-family: var(--font-headings);
   cursor: pointer;
@@ -10,6 +10,9 @@
 }
 
 .cta-bigger {
-  margin-left: 2.5rem;
   padding: 0.5rem 1.25rem;
+}
+
+.delete-button {
+  margin-bottom: 2rem; 
 }

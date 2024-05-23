@@ -21,8 +21,15 @@ export function postTemplate(postData) {
 
     subheading.append(date, author, editLink);
 
+    const heading = document.createElement("div");
+    heading.classList.add("post-heading");
+    heading.append(title, subheading);
+
+    const mediaContainer = document.createElement("div");
+    mediaContainer.classList.add("media-container");
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
+    mediaContainer.appendChild(media);
 
     const body = document.createElement("p");
     body.innerText = postData.body;
@@ -39,7 +46,7 @@ export function postTemplate(postData) {
 
     const post = document.createElement("div");
     post.classList.add("post");
-    post.append(title, subheading, media, body, tagsContainer);
+    post.append(heading, mediaContainer, body, tagsContainer);
     return post;
 }
 
