@@ -45,7 +45,11 @@ export function postGridTemplate(postData, index) {
 
 export function renderPostGridTemplate(posts, index){
     const latestPostsGrid = document.querySelector(".latest-posts-grid");
-    posts.forEach((post, index) => {
+
+    const sortedPosts = posts.sort((a, b) => new Date(b.created) - new Date(a.created));
+    const latestPosts = sortedPosts.slice(0, 12);
+
+    latestPosts.forEach((post, index) => {
        
        latestPostsGrid.appendChild(postGridTemplate(post, index)); 
     });
