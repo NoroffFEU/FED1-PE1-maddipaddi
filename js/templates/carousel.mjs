@@ -1,8 +1,9 @@
 import { getPosts } from "../api/posts/read.mjs";
+import { initateCarousel } from "../utils/carousel.mjs";
 import { formatDate } from "../utils/formatDate.mjs";
 import { viewEditLink } from "../utils/viewEditLink.mjs";
 
-export function postGridTemplate(postData, index) {
+export function postCarouselTemplate(postData, index) {
     const title = document.createElement("h3");
     title.innerText = postData.title;
 
@@ -32,32 +33,38 @@ export function postGridTemplate(postData, index) {
 
 
     const post = document.createElement("div");
-    post.classList.add("post-card");
-    if (index % 5 === 0) {
-        post.classList.add('full-width');
+    post.classList.add("carousel-cards");
+    post.classList.add("card");
+    if (index === 0) {
+        post.classList.add("visible");
       } else {
-        post.classList.add('half-width');
+        post.classList.add("hidden");
       }
     post.append(heading, mediaContainer);
-    return post;
+    
+    const carouselSlides = document.querySelector(".carousel-slides");
+    carouselSlides.append(post);
+
+    return carouselSlides;
 }
 
 
-export function renderPostGridTemplate(posts){
-    const latestPostsGrid = document.querySelector(".latest-posts-grid");
+export function renderPostCarouselTemplate(carouselSlides){
+    const latestPostsCarousel = document.querySelector(".carousel-container");
+    
+    const sortedPosts = carouselSlides.sort((a, b) => new Date(b.created) - new Date(a.created));
+    const latestPosts = sortedPosts.slice(0, 3);
 
-    const sortedPosts = posts.sort((a, b) => new Date(b.created) - new Date(a.created));
-    const latestPosts = sortedPosts.slice(0, 12);
-
-    latestPosts.forEach((post, index) => {
+    latestPosts.forEach((carouselSlides, index) => {
        
-       latestPostsGrid.appendChild(postGridTemplate(post, index)); 
+        latestPostsCarousel.appendChild(postCarouselTemplate(carouselSlides, index)); 
     });
 }
 
 
-export async function renderPostGrid() {
+export async function renderPostCarousel() {
       const postList = await getPosts();
       const posts = postList.data;
-      renderPostGridTemplate(posts);
+      renderPostCarouselTemplate(posts);
+      initateCarousel();
 }

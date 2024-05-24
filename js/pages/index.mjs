@@ -3,13 +3,17 @@ import { getPosts } from "../api/posts/read.mjs";
 import { renderPosts } from "../templates/post.mjs";
 import { loginView } from "../utils/loginView.mjs";
 import { renderPostGrid } from "../templates/grid.mjs";
+import { renderPostCarousel } from "../templates/carousel.mjs";
+
 
 hamburgerMenuInit();
 
 getPosts();
 
-renderPosts();
+renderPostCarousel(); 
 
 renderPostGrid(); 
+
+renderPosts();
 
 loginView(); 
