@@ -2,7 +2,7 @@ import { getPosts } from "../api/posts/read.mjs";
 import { formatDate } from "../utils/formatDate.mjs";
 import { viewEditLink } from "../utils/viewEditLink.mjs";
 
-export function postGridTemplate(postData) {
+export function postGridTemplate(postData, index) {
     const title = document.createElement("h3");
     title.innerText = postData.title;
 
@@ -33,16 +33,21 @@ export function postGridTemplate(postData) {
 
     const post = document.createElement("div");
     post.classList.add("post-card");
+    if (index % 5 === 0) {
+        post.classList.add('full-width');
+      } else {
+        post.classList.add('half-width');
+      }
     post.append(heading, mediaContainer);
     return post;
 }
 
 
-export function renderPostGridTemplate(posts){
+export function renderPostGridTemplate(posts, index){
     const latestPostsGrid = document.querySelector(".latest-posts-grid");
-    posts.forEach(post => {
+    posts.forEach((post, index) => {
        
-       latestPostsGrid.appendChild(postGridTemplate(post)); 
+       latestPostsGrid.appendChild(postGridTemplate(post, index)); 
     });
 }
 

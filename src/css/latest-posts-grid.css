@@ -1,8 +1,9 @@
 .latest-posts-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0 2rem; 
 }
 
 .latest-posts-title {
@@ -13,7 +14,25 @@
 }
 
 .post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
   background-color: var(--color-card);
   padding: 2rem;
   border-radius: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.post-heading, .media-container {
+  flex: 1 1 auto;
+}
+
+.full-width {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.half-width {
+  grid-column: span 1;
+  grid-row: span 1; 
 }
