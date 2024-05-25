@@ -34,12 +34,22 @@
     padding-bottom: 0.5rem;
   }
 
-  .postfield-title, .postfield-tags, .postfield-bodytext {
+  .postfield-title,
+  .postfield-tags,
+  .postfield-bodytext {
     min-width: 90vw;
+  }
+
+  .carousel-slides > .card {
+    height: 325px;
+  }
+
+  .carousel-cards > .media-container {
+    height: 8rem;
   }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 1019px) {
   html {
     font-size: 18px;
   }
@@ -52,12 +62,14 @@
     gap: 4rem;
   }
 
-  .postfield-title, .postfield-tags, .postfield-bodytext {
+  .postfield-title,
+  .postfield-tags,
+  .postfield-bodytext {
     min-width: 70vw;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1020px) and (max-width: 1349px) {
   html {
     font-size: 25px;
   }
@@ -68,5 +80,45 @@
 
   nav ul {
     gap: 6rem;
+  }
+
+  .latest-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 3rem;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  .half-width {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 1350px) {
+  html {
+    font-size: 25px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    gap: 6rem;
+  }
+
+  .latest-posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 2rem;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  .half-width {
+    grid-column: span 1;
   }
 }
