@@ -1,5 +1,4 @@
 import { API_BASE_URL } from "../constants.mjs";
-import { displayLoginConfirmation } from "../../utils/loginConfirmation.mjs";
 import * as accountStorage from "../../storage/account.mjs"; 
 
 const action = "/auth/login";
