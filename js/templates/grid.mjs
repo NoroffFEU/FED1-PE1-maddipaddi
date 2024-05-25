@@ -39,7 +39,11 @@ export function postGridTemplate(postData, index) {
         post.classList.add('half-width');
       }
     post.append(heading, mediaContainer);
-    return post;
+
+    const clickableThumbnail = document.createElement("a");
+    clickableThumbnail.setAttribute("href", `../../post/index.html?id=${postData.id}`);
+    clickableThumbnail.appendChild(post);
+    return clickableThumbnail;
 }
 
 
