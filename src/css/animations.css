@@ -21,7 +21,7 @@
     
 .smoke-wrapper {
     position: absolute;
-    right: 40%; 
+    right: 45%; 
     bottom: 333px; 
 }
 
@@ -41,7 +41,6 @@
 }
 
 .smoke3 {
-    width: 500px; 
     animation: smoke3 4s linear infinite; 
     animation-delay: 2.5s; 
 }

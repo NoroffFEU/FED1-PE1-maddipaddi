@@ -16,6 +16,7 @@ export function displayLoginConfirmation() {
 
     const logoutButton = document.createElement("button");
     logoutButton.classList.add("cta");
+    logoutButton.classList.add("cta-bigger");
     logoutButton.classList.add("logout-button");
     logoutButton.innerText = "Log out";
     logoutListener(logoutButton);

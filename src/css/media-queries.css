@@ -47,6 +47,15 @@
   .carousel-cards > .media-container {
     height: 8rem;
   }
+
+  .smoke-and-pipe-wrapper {
+    width: 200px;
+    height: 250px;
+  }
+
+  .smoke-wrapper { 
+    bottom: 133px; 
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1019px) {
