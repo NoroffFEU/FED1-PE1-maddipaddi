@@ -86,6 +86,12 @@
 
 .welcome-banner-logo {
   align-self: flex-end;
+  padding-bottom: 1rem;
+}
+
+.welcome-banner-logo > img {
+  max-height: clamp(6rem, 50vh, 12rem);
+  max-width: clamp(6rem, 50vw, 12rem);
 }
 
 /* Blog feed */
