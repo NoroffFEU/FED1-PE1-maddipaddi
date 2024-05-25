@@ -31,6 +31,11 @@ export function postCarouselTemplate(postData, index) {
     media.setAttribute("src", postData.media.url);
     mediaContainer.appendChild(media);
 
+    const readMoreButton = document.createElement("a");
+    readMoreButton.setAttribute("href", `../../post/index.html?id=${postData.id}`);
+    readMoreButton.classList.add("cta");
+    readMoreButton.classList.add("cta-bigger");
+    readMoreButton.innerText = "Read more";
 
     const post = document.createElement("div");
     post.classList.add("carousel-cards");
@@ -40,7 +45,7 @@ export function postCarouselTemplate(postData, index) {
       } else {
         post.classList.add("hidden");
       }
-    post.append(heading, mediaContainer);
+    post.append(heading, mediaContainer, readMoreButton);
     
     const carouselSlides = document.querySelector(".carousel-slides");
     carouselSlides.append(post);
