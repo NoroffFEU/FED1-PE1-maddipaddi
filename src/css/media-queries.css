@@ -91,7 +91,7 @@
     gap: 6rem;
   }
 
-  .latest-posts-grid {
+  .latest-posts-grid, .post-grid {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 3rem;
   }
@@ -118,7 +118,7 @@
     gap: 6rem;
   }
 
-  .latest-posts-grid {
+  .latest-posts-grid, .post-grid {
     grid-template-columns: repeat(3, 1fr);
     margin: 0 2rem;
   }

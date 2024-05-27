@@ -1,4 +1,4 @@
-.latest-posts-grid {
+.latest-posts-grid, .post-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -33,4 +33,8 @@
 
 .half-width {
   grid-column: span 1;
+}
+
+.dropdown {
+  padding: 0.5rem; 
 }
