@@ -4,7 +4,7 @@ export function loginNav() {
     const menu = document.querySelector(".menu");
     const createNewPost = document.createElement("li");
     const createNewPostLink = document.createElement("a");
-    createNewPostLink.setAttribute("href", "../../post/create.html");
+    createNewPostLink.setAttribute("href", "post/create.html");
 
     
     function linkActive() {
