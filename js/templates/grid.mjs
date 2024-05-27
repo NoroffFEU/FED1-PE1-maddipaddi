@@ -42,7 +42,7 @@ export function postGridTemplate(postData, index) {
     post.append(heading, mediaContainer);
 
     const clickableThumbnail = document.createElement("a");
-    clickableThumbnail.setAttribute("href", `../../post/index.html?id=${postData.id}`);
+    clickableThumbnail.setAttribute("href", `post/index.html?id=${postData.id}`);
     clickableThumbnail.appendChild(post);
     return clickableThumbnail;
 }
