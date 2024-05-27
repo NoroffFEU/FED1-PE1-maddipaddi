@@ -28,6 +28,7 @@ export function postGridTemplate(postData, index) {
     mediaContainer.classList.add("media-container");
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
+    media.setAttribute("alt", postData.media.alt);
     mediaContainer.appendChild(media);
 
 

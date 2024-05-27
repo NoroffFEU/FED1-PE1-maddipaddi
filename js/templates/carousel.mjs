@@ -4,7 +4,7 @@ import { formatDate } from "../utils/formatDate.mjs";
 import { viewEditLink } from "../utils/viewEditLink.mjs";
 
 export function postCarouselTemplate(postData, index) {
-    const title = document.createElement("h3");
+    const title = document.createElement("h1");
     title.innerText = postData.title;
 
     const subheading = document.createElement("div");
@@ -29,6 +29,7 @@ export function postCarouselTemplate(postData, index) {
     mediaContainer.classList.add("media-container");
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
+    media.setAttribute("alt", postData.media.alt);
     mediaContainer.appendChild(media);
 
     const readMoreButton = document.createElement("a");

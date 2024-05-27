@@ -29,6 +29,7 @@ export function postTemplate(postData) {
     mediaContainer.classList.add("media-container");
     const media = document.createElement("img");
     media.setAttribute("src", postData.media.url);
+    media.setAttribute("alt", postData.media.alt);
     mediaContainer.appendChild(media);
 
     const body = document.createElement("p");
