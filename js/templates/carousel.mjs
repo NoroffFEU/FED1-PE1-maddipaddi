@@ -33,7 +33,7 @@ export function postCarouselTemplate(postData, index) {
     mediaContainer.appendChild(media);
 
     const readMoreButton = document.createElement("a");
-    readMoreButton.setAttribute("href", `../../post/index.html?id=${postData.id}`);
+    readMoreButton.setAttribute("href", `post/index.html?id=${postData.id}`);
     readMoreButton.classList.add("cta");
     readMoreButton.classList.add("cta-bigger");
     readMoreButton.innerText = "Read more";
