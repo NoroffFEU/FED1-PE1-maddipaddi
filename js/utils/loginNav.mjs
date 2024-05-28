@@ -1,10 +1,11 @@
 import { load } from "../storage/account.mjs";
+import { checkIfFrontPage } from "./checkIfFrontPage.mjs";
 
 export function loginNav() {
     const menu = document.querySelector(".menu");
     const createNewPost = document.createElement("li");
     const createNewPostLink = document.createElement("a");
-    createNewPostLink.setAttribute("href", `post/create.html`);
+    createNewPostLink.setAttribute("href", `${checkIfFrontPage()}post/create.html`);
 
     
     function linkActive() {
