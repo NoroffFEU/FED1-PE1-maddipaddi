@@ -42,12 +42,11 @@ async function initialize() {
     const dropdown = createDropdown(uniqueTags, (selectedTag) => {
         renderPostsByTagsAndSort(selectedTag, document.querySelector("#sort-order").value);
     });
-    console.log(dropdown);
     dropdownContainer.appendChild(dropdown);
 
    
-   await renderPostsByTagsAndSort();
+   renderPostsByTagsAndSort();
 }
 
-initialize();
+document.addEventListener("DOMContentLoaded", initialize);
 
