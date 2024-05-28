@@ -1,19 +1,23 @@
 import { getPosts } from "../api/posts/read.mjs";
 import { renderPostGridAll } from "../templates/grid-all-posts.mjs";
+import { sortPostsByDate } from "./sortBy.mjs";
 
 
-export async function renderPostsByTags(tag = "") {
+export async function renderPostsByTagsAndSort(tag = "", order = "newest") {
     const postList = await getPosts();
-    const posts = postList.data;
+    let posts = postList.data;
 
-    const filteredPosts = tag ? posts.filter(post => post.tags.includes(tag)) : posts;
+    if (tag) {
+        posts = posts.filter(post => post.tags.includes(tag));
+    }
+    
+    posts = sortPostsByDate(posts, order);
 
     const postGrid = document.querySelector(".post-grid");
     postGrid.innerHTML = "";  
 
-    renderPostGridAll(filteredPosts);
+    renderPostGridAll(posts);
 }
-
 
   export function getUniqueTags(posts) {
     const tags = new Set();
