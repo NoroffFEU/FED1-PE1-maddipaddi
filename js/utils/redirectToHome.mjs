@@ -1,9 +1,5 @@
 export function redirectToHome() {
-    const pathArray = window.location.pathname.split('/');
-    let basePath = "/";
-    
-    if (pathArray.length > 1 && pathArray[1] !== "") {
-        basePath = "/" + pathArray[1] + "/";
-    }
-    window.location.href = window.location.origin + basePath;
+    const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
+    const baseUrl = window.location.origin + basePath;
+    window.location.href = baseUrl + '/';
 }
