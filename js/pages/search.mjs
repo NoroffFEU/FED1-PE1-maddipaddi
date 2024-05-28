@@ -17,13 +17,6 @@ async function initialize() {
 
     const uniqueTags = getUniqueTags(posts);
 
-    const dropdownContainer = document.querySelector(".filter");
-    const dropdown = createDropdown(uniqueTags, (selectedTag) => {
-        renderPostsByTagsAndSort(selectedTag, document.querySelector("#sort-order").value);
-    });
-    dropdownContainer.appendChild(dropdown);
-
-
     const sortContainer = document.querySelector(".sort");
     const sortDropdown = document.createElement("select");
     sortDropdown.classList.add("dropdown");
@@ -44,6 +37,14 @@ async function initialize() {
     sortDropdown.addEventListener("change", (event) => {
         renderPostsByTagsAndSort(document.querySelector(".filter select").value, event.target.value);
     });
+
+    const dropdownContainer = document.querySelector(".filter");
+    const dropdown = createDropdown(uniqueTags, (selectedTag) => {
+        renderPostsByTagsAndSort(selectedTag, document.querySelector("#sort-order").value);
+    });
+    console.log(dropdown);
+    dropdownContainer.appendChild(dropdown);
+
    
    await renderPostsByTagsAndSort();
 }
