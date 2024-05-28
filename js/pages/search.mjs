@@ -45,7 +45,7 @@ async function initialize() {
         renderPostsByTagsAndSort(document.querySelector(".filter select").value, event.target.value);
     });
    
-    renderPostsByTagsAndSort();
+   await renderPostsByTagsAndSort();
 }
 
 initialize();
