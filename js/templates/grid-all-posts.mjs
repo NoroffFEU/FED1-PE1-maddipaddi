@@ -33,11 +33,6 @@ export function postGridAll(postData, index) {
 
     const post = document.createElement("div");
     post.classList.add("post-card");
-    if (index % 5 === 0) {
-        post.classList.add('full-width');
-      } else {
-        post.classList.add('half-width');
-      }
     post.append(heading, mediaContainer);
 
     const clickableThumbnail = document.createElement("a");
@@ -52,3 +47,4 @@ export function renderPostGridAll(posts){
        postGrid.appendChild(postGridAll(post, index)); 
     });
 }
+
