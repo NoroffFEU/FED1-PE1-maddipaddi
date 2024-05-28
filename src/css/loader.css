@@ -1,0 +1,20 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #800020;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-self: center;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
