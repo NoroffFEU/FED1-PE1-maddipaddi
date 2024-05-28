@@ -34,15 +34,33 @@ async function initialize() {
     sortContainer.appendChild(sortDropdown);
 
     sortDropdown.addEventListener("change", (event) => {
-        renderPostsByTagsAndSort(document.querySelector(".filter select").value, event.target.value);
+        const selectedTag = document.querySelector(".filter").value;
+        const searchQuery = document.querySelector("#search-input").value;
+        renderPostsByTagsAndSort(selectedTag, event.target.value, searchQuery);
     });
 
     const dropdownContainer = document.querySelector(".filter");
     const dropdown = createDropdown(uniqueTags, (selectedTag) => {
-        renderPostsByTagsAndSort(selectedTag, document.querySelector("#sort-order").value);
+        const sortOrder = document.querySelector("#sort-order").value;
+        const searchQuery = document.querySelector("#search-input").value;
+        renderPostsByTagsAndSort(selectedTag, sortOrder, searchQuery);
     });
     dropdownContainer.appendChild(dropdown);
 
+
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.createElement("input");
+    searchInput.classList.add("dropdown");
+    searchInput.id = "search-input";
+    searchInput.type = "text";
+    searchInput.placeholder = "Search posts...";
+    searchInput.addEventListener("input", (event) => {
+        const selectedTag = document.querySelector(".filter").value;
+        const sortOrder = document.querySelector("#sort-order").value;
+        renderPostsByTagsAndSort(selectedTag, sortOrder, event.target.value);
+    });
+    searchContainer.appendChild(searchInput);
+    
    
    renderPostsByTagsAndSort();
 }
