@@ -4,7 +4,8 @@ import { loginNav } from "./loginNav.mjs";
 export function loginView() {
 const token = load("token"); 
 if (!token) {
-// Error handling here
+    alert("Accesstoken could not be loaded: " + error);
+    throw new Error(error); 
 } else {
     loginNav();
 }
