@@ -20,7 +20,6 @@ renderPostGrid();
 
 renderPosts();
     } catch (error) {
-        console.log("An error occurred: ", error);
         alert("An error occurred displaying content: " + "'" + error + "'." + " Please try again later.");
     } finally {
         hideLoader();
