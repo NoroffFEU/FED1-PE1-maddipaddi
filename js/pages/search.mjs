@@ -3,7 +3,6 @@ import { getPosts } from "../api/posts/read.mjs";
 import { createDropdown, getUniqueTags, renderPostsByTagsAndSort } from "../utils/filterBy.mjs";
 import { hamburgerMenuInit } from "../utils/hamburgerMenu.mjs";
 import { loginView } from "../utils/loginView.mjs";
-import { sortPostsByDate } from "../utils/sortBy.mjs";
 
 
 
